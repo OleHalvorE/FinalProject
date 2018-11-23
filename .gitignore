@@ -1,2 +1,5 @@
-*.scss
 *.config
+*.scss
+
+scss/
+*.scss
