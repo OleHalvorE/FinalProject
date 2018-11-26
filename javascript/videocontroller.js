@@ -23,12 +23,12 @@ videoTranscript.style.display = "none";
 btnAccessibilityOnOff.onclick = function() {
   if(videoPlayer.controls == true){
     videoPlayer.controls = false;
-    btnAccessibilityOnOff.textContent = "Turn off accesible video controls"
+    btnAccessibilityOnOff.textContent = "Regular controls"
     videoControls.style.display = "block";
 
   } else {
     videoPlayer.controls = true;
-    btnAccessibilityOnOff.textContent = "Turn on accesible video controls"
+    btnAccessibilityOnOff.textContent = "Accessible controls"
     videoControls.style.display = "none";
   }
 }
