@@ -9,11 +9,11 @@ var btnTranscript = document.querySelector(".transcript");
 /* Deklarasjon av variabler for DOM elementene */
 var vidAccControls = document.getElementById("videoAccessibilityControls");
 var videoPlayer = document.querySelector("video");
-var videocontrols = document.getElementById("videocontrols");
+var videoControls = document.getElementById("videoControls");
 var videoTranscript = document.getElementById("videoTranscript");
 
 /* Sikrer funksjonalitet ved deaktivert Javascript */
-videocontrols.style.display = "block";
+videoControls.style.display = "block";
 vidAccControls.style.display = "block";
 videoPlayer.controls = false;
 videoTranscript.style.display = "none";
@@ -23,13 +23,13 @@ videoTranscript.style.display = "none";
 btnAccessibilityOnOff.onclick = function() {
   if(videoPlayer.controls == true){
     videoPlayer.controls = false;
-    btnAccessibilityOnOff.textContent = "Turn off accesible video controls"
-    videocontrols.style.display = "block";
+    btnAccessibilityOnOff.textContent = "Regular controls"
+    videoControls.style.display = "block";
 
   } else {
     videoPlayer.controls = true;
-    btnAccessibilityOnOff.textContent = "Turn on accesible video controls"
-    videocontrols.style.display = "none";
+    btnAccessibilityOnOff.textContent = "Accessible controls"
+    videoControls.style.display = "none";
   }
 }
 
