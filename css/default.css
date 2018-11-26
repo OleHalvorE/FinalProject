@@ -414,12 +414,16 @@ main #problem {
 }
 
 main #videocontainer {
-  -webkit-column-width: 200px;
-  column-width: 200px;
   max-width: 1000px;
-  -webkit-column-rule: 1px inset black;
-  column-rule: 1px inset black;
   margin: 0 auto;
+}
+
+main #videocontainer video {
+  max-width: 100%;
+}
+
+main #videocontainer h1 {
+  text-align: center;
 }
 
 main #videocontainer #videoAccessibilityControls {
@@ -430,7 +434,6 @@ main #videocontainer #videoAccessibilityControls {
 
 main #videocontainer #videoControls {
   display: none;
-  border-bottom: 1px solid black;
   text-align: center;
 }
 
@@ -451,6 +454,11 @@ main #videocontainer .playerbtn {
 
 main #videocontainer .playerbtn:hover {
   border: 0.2px solid white;
+}
+
+main #videocontainer #videoTranscript h2 {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 main #solution {
