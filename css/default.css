@@ -413,6 +413,15 @@ main #problem {
   margin: 0 auto;
 }
 
+main #videocontainer {
+  -webkit-column-width: 200px;
+  column-width: 200px;
+  max-width: 1000px;
+  -webkit-column-rule: 1px inset black;
+  column-rule: 1px inset black;
+  margin: 0 auto;
+}
+
 main #videocontainer #videoAccessibilityControls {
   display: none;
   text-align: center;
