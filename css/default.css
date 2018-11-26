@@ -189,6 +189,13 @@ header nav a:hover {
   color: red;
 }
 
+header nav .buttons button {
+  border-radius: 25%;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+
 @supports (display: grid) {
   header {
     display: grid;
