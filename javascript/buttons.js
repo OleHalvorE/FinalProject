@@ -54,25 +54,21 @@ function changeColor() {
     }
 }
 
-var list_elements = document.getElementsByTagName("nav").firstChild;
-for(li in list_elements){
-    alert("dasdsa");
-    li.firstChild.addEventListener("click", function() {
-        alert("dasdsa");
-    });
-}
 window.onload = function() {
-    var list_elements = document.getElementsByTagName("nav").firstChild;
-    for(li in list_elements){
-        console.log(li.nodeValue);
-        li.firstChild.addEventListener("click", function() {
-            alert("dasdsa");
+    var list_elements = document.getElementsByClassName("link");
+    for(var i=0; i<list_elements.length; i++){
+        list_elements[i].addEventListener("mouseover", function() {
+            this.style.color = "red";
+        });
+    }
+    for(var i=0; i<list_elements.length; i++){
+        list_elements[i].addEventListener("mouseleave", function() {
+            if ( currentColor == "white") {
+                this.style.color = "rgb(24,23,23)";
+            }
+            else {
+                this.style.color = "white";
+            }
         });
     }
 }
-document.getElementsByTagName("NAV")[0].childNodes[0].addEventListener("mouseover", function(){
-    this.background = "green";
-});
-document.getElementsByTagName("NAV")[0].firstChild.addEventListener("mouseout", function(){
-    this.background = "green";
-}); 
