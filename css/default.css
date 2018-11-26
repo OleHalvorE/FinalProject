@@ -139,6 +139,14 @@ table {
   font-weight: 500;
 }
 
+#backToTop {
+  position: -webkit-sticky;
+  position: sticky;
+  visibility: hidden;
+  left: 100%;
+  top: 40%;
+}
+
 p::before {
   white-space: pre;
   content: "\a";
