@@ -13,23 +13,28 @@ function changeFontSize(percent) {
         }
     });
 }
-function defaultColors() {
-    document.body.style.background = "white";
-    let x = document.body.querySelectorAll("*");
-    x.forEach(function(item) {
-        item.style.color = "rgb(24,23,23)"; 
-    });
-}
-
-function blackColors() {
-    document.body.style.background = "black";
-    let x = document.body.querySelectorAll("*");
-    x.forEach(function(item) {
-        item.style.color = "white"; 
-    });
-    document.getElementsByTagName("footer")[0].firstChild.style.color = "rgb(24,23,23)";
-    var buttons = document.getElementsByTagName("button");
-    for(var i=0; i<buttons.length; i++) {
-        buttons[i].style.color = "rgb(24,23,23)";
+function changeColor() {
+    if ( document.body.style.background == "white none repeat scroll 0% 0%" || document.body.style.background  =="" ) {
+        document.body.style.background = "black";
+        let x = document.body.querySelectorAll("*");
+        x.forEach(function(item) {
+            if(item.id != "logo") {
+                item.style.color = "white";
+            } 
+        });
+        document.getElementsByTagName("footer")[0].firstChild.style.color = "rgb(24,23,23)";
+        var buttons = document.getElementsByTagName("button");
+        for(var i=0; i<buttons.length; i++) {
+            buttons[i].style.color = "rgb(24,23,23)";
+        }
+    }
+    else {
+        document.body.style.background = "white";
+        let x = document.body.querySelectorAll("*");
+        x.forEach(function(item) {
+            if(item.id != "logo") {
+                item.style.color = "rgb(24,23,23)";
+            }
+        });
     }
 }
