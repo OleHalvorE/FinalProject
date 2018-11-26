@@ -144,6 +144,15 @@ p::before {
   content: "\a";
 }
 
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h2::first-letter {
+  color: red;
+}
+
 strong {
   font-weight: bold;
 }
@@ -467,11 +476,6 @@ main #videocontainer .playerbtn:hover {
   border: 0.2px solid white;
 }
 
-main #videocontainer #videoTranscript h2 {
-  font-size: 30px;
-  font-weight: bold;
-}
-
 main #solution {
   -webkit-column-width: 200px;
   column-width: 200px;
@@ -529,6 +533,42 @@ main #product img img:after {
   clear: both;
   content: "";
   display: table;
+}
+
+main #app {
+  max-width: 1000px;
+}
+
+@supports (display: flex) {
+  main #app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  main #app article {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    -ms-flex-preferred-size: 500px;
+    flex-basis: 500px;
+  }
+  main #app figure {
+    margin: 0 auto;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    margin-top: 25px;
+    width: 250px;
+    justify-self: center;
+  }
+  main #app img {
+    width: 100%;
+  }
 }
 
 main #interview {
