@@ -405,8 +405,8 @@ main li {
 }
 
 main #problem {
-  -webkit-column-width: 200px;
-  column-width: 200px;
+  -webkit-column-width: 300px;
+  column-width: 300px;
   max-width: 1000px;
   -webkit-column-rule: 1px inset black;
   column-rule: 1px inset black;
@@ -468,8 +468,8 @@ main #videocontainer .playerbtn:hover {
 }
 
 main #solution {
-  -webkit-column-width: 200px;
-  column-width: 200px;
+  -webkit-column-width: 300px;
+  column-width: 300px;
   max-width: 1000px;
   -webkit-column-rule: 1px inset black;
   column-rule: 1px inset black;
@@ -491,8 +491,8 @@ main #solution img img:after {
 }
 
 main #product {
-  -webkit-column-width: 200px;
-  column-width: 200px;
+  -webkit-column-width: 300px;
+  column-width: 300px;
   max-width: 1000px;
   -webkit-column-rule: 1px inset black;
   column-rule: 1px inset black;
@@ -563,8 +563,8 @@ main #app {
 }
 
 main #interview {
-  -webkit-column-width: 200px;
-  column-width: 200px;
+  -webkit-column-width: 300px;
+  column-width: 300px;
   max-width: 1000px;
   -webkit-column-rule: 1px inset black;
   column-rule: 1px inset black;
