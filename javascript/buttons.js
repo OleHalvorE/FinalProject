@@ -20,7 +20,7 @@ function changeColor() {
         x.forEach(function(item) {
             if(item.id != "logo") {
                 item.style.color = "white";
-            } 
+            }
         });
         document.getElementsByTagName("footer")[0].firstChild.style.color = "rgb(24,23,23)";
         var buttons = document.getElementsByTagName("button");
