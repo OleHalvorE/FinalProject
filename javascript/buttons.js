@@ -14,12 +14,18 @@ function changeFontSize(percent) {
     });
 }
 function changeColor() {
-    if ( document.body.style.background == "white none repeat scroll 0% 0%" || document.body.style.background  =="" ) {
+    if ( document.body.style.background == "white none repeat scroll 0% 0%" || document.body.style.background  == "" ) {
         document.body.style.background = "black";
         let x = document.body.querySelectorAll("*");
         x.forEach(function(item) {
             if(item.id != "logo") {
-                item.style.color = "white";
+                if( item.className.split(" ")[0] == "playerbtn" ){
+                    item.style.color = "rgb(24,23,23)";
+                    item.style.background = "white";
+                }
+                else {
+                    item.style.color = "white";
+                }
             }
         });
         document.getElementsByTagName("footer")[0].firstChild.style.color = "rgb(24,23,23)";
@@ -33,7 +39,13 @@ function changeColor() {
         let x = document.body.querySelectorAll("*");
         x.forEach(function(item) {
             if(item.id != "logo") {
-                item.style.color = "rgb(24,23,23)";
+                if( item.className.split(" ")[0] == "playerbtn" ){
+                    item.style.color = "white";
+                    item.style.background = "rgb(24,23,23)";
+                }
+                else {
+                    item.style.color = "rgb(24,23,23)";
+                }
             }
         });
     }
