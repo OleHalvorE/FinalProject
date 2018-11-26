@@ -413,6 +413,37 @@ main #problem {
   margin: 0 auto;
 }
 
+main #videocontainer #videoAccessibilityControls {
+  display: none;
+  text-align: center;
+  min-height: 47px;
+}
+
+main #videocontainer #videoControls {
+  display: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+main #videocontainer .playerbtn {
+  background: black;
+  text-align: center;
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-box-shadow: 0.5px 0.5px 4px black;
+  box-shadow: 0.5px 0.5px 4px black;
+  margin: 8px 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+main #videocontainer .playerbtn:hover {
+  border: 0.2px solid white;
+}
+
 main #solution {
   -webkit-column-width: 200px;
   column-width: 200px;
