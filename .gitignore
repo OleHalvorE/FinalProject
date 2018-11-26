@@ -5,3 +5,4 @@ scss/
 *.scss
 
 scss
+.DS_Store
