@@ -45,7 +45,9 @@ header {
     max-width: 1050px;
     margin: 0 auto;
     padding: 0 2em;
-    h1 { text-align: center;
+    h1 {
+      text-align: center;
+
     }
     nav{
         text-align: center;
@@ -76,7 +78,7 @@ header {
                 border: 1px solid black;
                 border-radius: 4px;
                 &:hover {
-                    border: 0.2px solid white;
+                border: 0.2px solid white;
                 }
             }
         }
@@ -157,6 +159,9 @@ header {
             }
         }
     }
+
+
+
     article{
         @supports ( display : grid) {
             grid-column: 1;
@@ -192,7 +197,7 @@ header {
 }
 
 main {
-    margin: 0 2em;
+    margin: 0 2%;
     h1 {
         font-weight: bold;
         font-size: 40px;
@@ -200,6 +205,11 @@ main {
             color:$quote;
             text-transform: uppercase;
         }
+    }
+    //Box-shadow og responsiv padding på sections
+    section {
+      padding:5%;
+      box-shadow: 1px 1px 15px 0px gray;
     }
     li {
         list-style-position: inside;
@@ -218,7 +228,7 @@ main {
             margin: 0 auto;
         }
         video {
-            box-shadow: .5px .5px 5px black;
+            box-shadow: 1px 1px 3px 0px gray;
             max-width: 100%;
         }
         h1{

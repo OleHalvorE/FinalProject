@@ -353,7 +353,7 @@ header figure img {
 }
 
 main {
-  margin: 0 2em;
+  margin: 0 2%;
 }
 main h1 {
   font-weight: bold;
@@ -362,6 +362,11 @@ main h1 {
 main h1::first-letter {
   color: red;
   text-transform: uppercase;
+}
+main section {
+  padding: 5%;
+  -webkit-box-shadow: 1px 1px 15px 0px gray;
+          box-shadow: 1px 1px 15px 0px gray;
 }
 main li {
   list-style-position: inside;
@@ -389,8 +394,8 @@ main #videocontainer {
   }
 }
 main #videocontainer video {
-  -webkit-box-shadow: .5px .5px 5px black;
-          box-shadow: .5px .5px 5px black;
+  -webkit-box-shadow: 1px 1px 3px 0px gray;
+          box-shadow: 1px 1px 3px 0px gray;
   max-width: 100%;
 }
 main #videocontainer h1 {
