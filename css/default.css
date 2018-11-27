@@ -148,7 +148,6 @@ h2 {
   font-size: 30px;
   font-weight: bold;
 }
-
 h2::first-letter {
   color: red;
 }
@@ -171,34 +170,27 @@ header {
   margin: 0 auto;
   padding: 0 2em;
 }
-
 header h1 {
   text-align: center;
 }
-
 header nav {
   text-align: center;
 }
-
 header nav ul {
   width: 100%;
   margin: 0 auto;
 }
-
 header nav li {
   padding: 0 0.3em;
   display: inline;
 }
-
 header nav a {
   color: #181717;
   text-decoration: none;
 }
-
 header nav a:hover {
   color: red;
 }
-
 header nav .buttons button {
   background: #181717;
   color: white !important;
@@ -208,24 +200,22 @@ header nav .buttons button {
   font-weight: bold;
   cursor: pointer;
   -webkit-box-shadow: 0.5px 0.5px 4px black;
-  box-shadow: 0.5px 0.5px 4px black;
+          box-shadow: 0.5px 0.5px 4px black;
   margin: 8px 10px;
   border: 1px solid black;
   border-radius: 4px;
 }
-
 header nav .buttons button:hover {
   border: 0.2px solid white;
 }
-
 @supports (display: grid) {
   header {
     display: grid;
     grid-template-columns: 100%;
     justify-items: center;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     header {
@@ -238,47 +228,40 @@ header nav .buttons button:hover {
     }
   }
 }
-
 header h1 {
   font-size: 40px;
   margin-top: 15px;
 }
-
 header h1 #logo {
   color: red;
   position: relative;
   font-size: 60px;
   top: 12px;
 }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   header h1 #logo {
     font-size: 100px;
     top: 14px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   header h1 #logo {
     font-size: 130px;
     top: 19px;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   header h1 {
     margin-bottom: 30px;
     font-size: 70px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   header h1 {
     margin-bottom: 30px;
     font-size: 100px;
   }
 }
-
 @supports (display: grid) {
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     header h1 {
@@ -293,14 +276,12 @@ header h1 #logo {
     }
   }
 }
-
 header nav {
   grid-column: 1;
   grid-row: 2;
   margin-top: 1.5em;
   margin-bottom: 30px;
 }
-
 @supports (display: grid) {
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     header nav {
@@ -316,21 +297,17 @@ header nav {
     }
   }
 }
-
 header nav li {
   padding: 0 0.3em;
   display: inline;
 }
-
 header nav a {
   color: #181717;
   text-decoration: none;
 }
-
 header nav a:hover {
   color: red;
 }
-
 @supports (display: grid) {
   header article {
     grid-column: 1;
@@ -349,16 +326,13 @@ header nav a:hover {
     }
   }
 }
-
 header figure {
-  -webkit-mask-image: -webkit-radial-gradient(closest-side, black, rgba(0, 0, 0, 0));
-  mask-image: radial-gradient(closest-side, black, rgba(0, 0, 0, 0));
+  -webkit-mask-image: radial-gradient(closest-side, black, rgba(0, 0, 0, 0));
+          mask-image: radial-gradient(closest-side, black, rgba(0, 0, 0, 0));
 }
-
 header figure img {
   width: 100%;
 }
-
 @supports (display: grid) {
   header figure {
     grid-column: 1;
@@ -381,66 +355,54 @@ header figure img {
 main {
   margin: 0 2em;
 }
-
 main h1 {
   font-weight: bold;
   font-size: 40px;
 }
-
 main h1::first-letter {
   color: red;
   text-transform: uppercase;
 }
-
 main li {
   list-style-position: inside;
   list-style-type: disc;
 }
-
 main #problem {
   -webkit-column-width: 300px;
-  column-width: 300px;
+          column-width: 300px;
   max-width: 1000px;
   -webkit-column-rule: 1px inset black;
-  column-rule: 1px inset black;
+          column-rule: 1px inset black;
   margin: 0 auto;
 }
-
 main #videocontainer {
   max-width: 1000px;
 }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   main #videocontainer {
     margin: 0 auto;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main #videocontainer {
     margin: 0 auto;
   }
 }
-
 main #videocontainer video {
   max-width: 100%;
 }
-
 main #videocontainer h1 {
   text-align: center;
 }
-
 main #videocontainer #videoAccessibilityControls {
   display: none;
   text-align: center;
   min-height: 47px;
 }
-
 main #videocontainer #videoControls {
   display: none;
   text-align: center;
 }
-
 main #videocontainer .playerbtn {
   background: black;
   text-align: center;
@@ -450,80 +412,68 @@ main #videocontainer .playerbtn {
   font-weight: bold;
   cursor: pointer;
   -webkit-box-shadow: 0.5px 0.5px 4px black;
-  box-shadow: 0.5px 0.5px 4px black;
+          box-shadow: 0.5px 0.5px 4px black;
   margin: 8px 10px;
   border: 1px solid black;
   border-radius: 4px;
 }
-
 main #videocontainer .playerbtn:hover {
   border: 0.2px solid white;
 }
-
 main #solution {
   -webkit-column-width: 300px;
-  column-width: 300px;
+          column-width: 300px;
   max-width: 1000px;
   -webkit-column-rule: 1px inset black;
-  column-rule: 1px inset black;
+          column-rule: 1px inset black;
   margin: 0 auto;
 }
-
 main #solution img {
   float: left;
   margin: 2em;
   margin-left: 0;
-  -webkit-shape-outside: ellipse();
   shape-outside: ellipse();
 }
-
 main #solution img img:after {
   clear: both;
   content: "";
   display: table;
 }
-
 main #product {
   -webkit-column-width: 300px;
-  column-width: 300px;
+          column-width: 300px;
   max-width: 1000px;
   -webkit-column-rule: 1px inset black;
-  column-rule: 1px inset black;
+          column-rule: 1px inset black;
   margin: 0 auto;
   -webkit-column-width: 400px;
-  column-width: 400px;
+          column-width: 400px;
   max-width: 1000px;
 }
-
 main #product img {
-  -webkit-mask-image: -webkit-radial-gradient(closest-side, black, rgba(0, 0, 0, 0));
-  mask-image: radial-gradient(closest-side, black, rgba(0, 0, 0, 0));
+  -webkit-mask-image: radial-gradient(closest-side, black, rgba(0, 0, 0, 0));
+          mask-image: radial-gradient(closest-side, black, rgba(0, 0, 0, 0));
   width: 100%;
   float: none;
   margin: 2em;
   margin-left: 0;
-  -webkit-shape-outside: circle();
   shape-outside: circle();
 }
-
 @media screen and (min-width: 516px) {
   main #product img {
     width: 400px;
     float: right;
   }
 }
-
 main #product img img:after {
   clear: both;
   content: "";
   display: table;
 }
-
 main #app {
   max-width: 1000px;
 }
-
-@supports (display: flex) {
+@supports ((display: -webkit-box) or (display: flex)) {
   main #app {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -531,21 +481,21 @@ main #app {
     margin: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   }
   main #app article {
     -webkit-box-flex: 2;
-    -ms-flex-positive: 2;
-    flex-grow: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
     -ms-flex-preferred-size: 500px;
-    flex-basis: 500px;
+        flex-basis: 500px;
   }
   main #app figure {
     margin: 0 auto;
     -webkit-box-flex: 0;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     margin-top: 25px;
     width: 250px;
     justify-self: center;
@@ -554,13 +504,12 @@ main #app {
     width: 100%;
   }
 }
-
 main #interview {
   -webkit-column-width: 300px;
-  column-width: 300px;
+          column-width: 300px;
   max-width: 1000px;
   -webkit-column-rule: 1px inset black;
-  column-rule: 1px inset black;
+          column-rule: 1px inset black;
   margin: 0 auto;
 }
 
@@ -572,7 +521,6 @@ footer {
   color: #181717;
   background: white;
 }
-
 footer a {
   text-decoration: none;
 }
