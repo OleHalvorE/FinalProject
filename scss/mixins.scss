@@ -1,0 +1,24 @@
+@mixin tabletQuery() {
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin desktopQuery() {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin tabletAndDesktopQuery() {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin baseArticle() {
+    column-width: 300px;
+    max-width: 1000px;
+    column-rule: 1px inset black;
+    margin: 0 auto;
+}

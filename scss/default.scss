@@ -1,0 +1,329 @@
+@import "reset";
+@import "mixins";
+
+$color: rgb(24, 23, 23);
+$background: white;
+$quote: red;
+$font-size: 20px;
+$font-weight: 500;
+
+* {
+    font-family: Arial, Helvetica, sans-serif, verdana;
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+p {
+    &::before {
+        white-space: pre;
+        content: "\a";
+    }
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    &::first-letter{
+        color: $quote;
+    }
+}
+strong {
+    font-weight: bold;
+}
+
+hr {
+    width: 95%;
+    max-width: 1050px;
+    margin: 70px auto;
+    }
+
+header {
+    font-family: Arial, Helvetica, sans-serif, verdana;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 2em;
+    h1 { text-align: center;
+    }
+    nav{
+        text-align: center;
+        ul { 
+            width: 100%; margin: 0 auto;}
+        li {
+            padding: 0 0.3em;
+            display: inline;
+        }
+        a {
+            color: $color;
+            text-decoration: none;
+            &:hover {
+                color: $quote;
+            }
+        }
+        .buttons {
+            button {
+                background: $color;
+                color: $background !important;
+                text-align: center;
+                padding: 5px 10px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0.5px 0.5px 4px black;
+                margin: 8px 10px;
+                border: 1px solid black;
+                border-radius: 4px;
+                &:hover {
+                    border: 0.2px solid white;
+                }
+            }
+        }
+    }
+    @supports ( display : grid ) {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        align-items: start;
+        @include tabletQuery() {
+            grid-template-columns: repeat(2, 50%);
+        }
+        @include desktopQuery() {
+            grid-template-columns: repeat(2, 50%);
+        }
+    }
+    h1 {
+        font-size: 40px;
+        margin-top: 15px;
+        #logo {
+            color: $quote;
+            position: relative;
+            font-size: 60px;
+            top: 12px;
+            @include tabletQuery() {
+                font-size: 100px;
+                top: 14px;
+            }
+            @include desktopQuery() {
+                font-size: 130px;
+                top: 19px;
+            }
+        }
+        @include tabletQuery() {
+            margin-bottom: 30px;
+            font-size: 70px;
+        }
+        @include desktopQuery() {
+            margin-bottom: 30px;
+            font-size: 100px;
+        }
+        @supports ( display : grid ) {
+            @include tabletQuery() {
+                grid-column: 1 / 2;
+                grid-row: 1;
+            }
+            @include desktopQuery() {
+                grid-column: 1 / 2;
+                grid-row: 1;
+            }
+        }
+    }
+    nav {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 1.5em;
+        margin-bottom: 30px;
+        @supports ( display : grid ) {
+            @include tabletQuery() {
+                grid-column: 2 / 3;
+                grid-row: 1;
+            }
+            @include desktopQuery() {
+                margin-top: 2em;
+                grid-column: 2 / 3;
+                grid-row: 1;
+            }
+        }
+        li {
+            padding: 0 0.3em;
+            display: inline;
+        }
+        a {
+            color: $color;
+            text-decoration: none;
+            &:hover {
+                color: $quote;
+            }
+        }
+    }
+    article{
+        @supports ( display : grid) {
+            grid-column: 1;
+            grid-row: 4;
+            @include tabletQuery() {
+                grid-column: 1 / 3;
+                grid-row: 3;
+            }
+            @include desktopQuery() {
+                grid-column: 1 / 2;
+                grid-row: 2;
+            }
+        }
+    }
+    figure {
+        mask-image: radial-gradient(closest-side, rgba(0,0,0,1),  rgba(0,0,0,0));
+        img {
+            width: 100%;
+        }
+        @supports ( display : grid ) {
+            grid-column: 1;
+            grid-row: 3;
+            @include tabletQuery() {
+                grid-column: 1 / 3;
+                grid-row: 2;
+            }
+            @include desktopQuery() {
+                grid-column: 2 / 3;
+                grid-row: 2;
+            }
+        }
+    }
+}
+
+main {
+    margin: 0 2em;
+    h1 {
+        font-weight: bold;
+        font-size: 40px;
+        &::first-letter {
+            color:$quote;
+            text-transform: uppercase;
+        }
+    }
+    li {
+        list-style-position: inside;
+        list-style-type: disc;
+    }
+    #problem {
+        @include baseArticle();
+    }
+
+    #videocontainer {
+        max-width: 1000px;
+        @include tabletQuery() {
+            margin: 0 auto;
+        }
+        @include desktopQuery() {
+            margin: 0 auto;
+        }
+        video {
+            max-width: 100%;
+        }
+        h1{
+            text-align:center;
+        }
+        #videoAccessibilityControls {
+            display: none;
+            text-align: center;
+            min-height: 47px;
+        }
+        #videoControls {
+            display: none;
+            text-align: center;
+        }
+        .playerbtn {
+            background: black;
+            text-align: center;
+            color: white;
+            padding: 5px 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0.5px 0.5px 4px black;
+            margin: 8px 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+            &:hover {
+                border: 0.2px solid white;
+            }
+        }
+    }
+
+    #solution {
+        img {
+            float: left;
+            margin: 2em;
+            margin-left: 0;
+            shape-outside: ellipse();   
+            img:after {
+                clear: both;
+                content: "";
+                display: table;
+            }   
+        }
+        @include baseArticle();
+    }
+
+    #product {
+        @include baseArticle();
+        column-width: 400px;
+        max-width: 1000px;
+        img {
+            mask-image: radial-gradient(closest-side, rgba(0,0,0,1),  rgba(0,0,0,0));
+            width:100%;
+            float: none;
+            @media screen and (min-width: 516px) {
+                width: 400px;
+                float: right;
+            }
+            margin: 2em;
+            margin-left: 0;
+            shape-outside: circle();
+            img:after {
+                clear: both;
+                content: "";
+                display: table;
+            }   
+        }
+    }
+
+    #app {
+        max-width: 1000px;
+        @supports ( display : flex ) {
+            display: flex;
+            margin: auto;
+            flex-flow: row wrap;
+            article {
+                flex-grow: 2;
+                flex-basis: 500px;
+            }
+            figure {
+                margin: 0 auto;
+                flex: 0 1 auto;
+                margin-top: 25px;
+                width: 250px;
+                justify-self: center;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    #interview {
+        @include baseArticle();
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 30px;
+    color: $color;
+    background: $background;
+    a {
+        text-decoration: none;
+    }
+}

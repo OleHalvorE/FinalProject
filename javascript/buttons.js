@@ -84,14 +84,3 @@ window.onload = function() {
         });
     }
 }
-
-window.onscroll = function()
-{
-    var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    if( scrollTop >= 1000 ) {
-        document.getElementById("backToTop").style.visibility="visible";
-    }
-    else {
-        document.getElementById("backToTop").style.visibility="hidden";
-    }
-};
