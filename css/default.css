@@ -389,6 +389,8 @@ main #videocontainer {
   }
 }
 main #videocontainer video {
+  -webkit-box-shadow: .5px .5px 5px black;
+          box-shadow: .5px .5px 5px black;
   max-width: 100%;
 }
 main #videocontainer h1 {
@@ -402,6 +404,9 @@ main #videocontainer #videoAccessibilityControls {
 main #videocontainer #videoControls {
   display: none;
   text-align: center;
+}
+main #videocontainer #videoTranscript {
+  margin: 2em auto;
 }
 main #videocontainer .playerbtn {
   background: black;
