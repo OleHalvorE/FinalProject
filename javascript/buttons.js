@@ -18,9 +18,9 @@ function changeFontSize(percent) {
 
 function cchangefontSize() {
     let button = document.getElementById("fontSize");
-    if( fontSizeCounter == 1 ) { changeFontSize(1.5); fontSizeCounter++; button.innerHTML = "Text Size: 150%"; }
+    if( fontSizeCounter == 1 ) { changeFontSize(1.5); fontSizeCounter++; button.innerHTML = "Text Size: 150%"; toggleColumnView(1000);}
     else if( fontSizeCounter == 2 ) { changeFontSize(2.0); fontSizeCounter++; button.innerHTML = "Text Size: 200%"; }
-    else { changeFontSize(1.0); fontSizeCounter = 1; button.innerHTML = "Text Size: 100%"; }
+    else { changeFontSize(1.0); fontSizeCounter = 1; button.innerHTML = "Text Size: 100%"; toggleColumnView(300);}
 }
 
 function changeColor() {
@@ -64,6 +64,21 @@ function changeColor() {
             }
         });
     }
+}
+
+function toggleColumnView(pixelSize){
+  let x = document.body.querySelectorAll("section");
+  x.forEach(function(item) {
+    if(item.id != "videocontainer"){
+      if (item.id == "product" && pixelSize < 500){
+        item.style.columnWidth = "400px";
+      } else if (item.id == "product" && pixelSize > 500){
+        item.style.columnWidth = pixelSize + "px";
+      } else {
+        item.style.columnWidth = pixelSize + "px";
+      }
+    }
+  })
 }
 
 window.onload = function() {
