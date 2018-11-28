@@ -144,6 +144,7 @@ header {
                 grid-row: 1;
             }
             @include desktopQuery() {
+                justify-self: start;
                 grid-column: 1 / 2;
                 grid-row: 1;
             }
@@ -153,7 +154,6 @@ header {
         grid-column: 1;
         grid-row: 2;
         margin-top: 1.5em;
-        margin-bottom: 30px;
         @supports ( display : grid ) {
             @include tabletQuery() {
                 grid-column: 2 / 3;
