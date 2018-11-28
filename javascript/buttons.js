@@ -18,9 +18,9 @@ function changeFontSize(percent) {
 
 function changefontSize() {
     let button = document.getElementById("fontSize");
-    if( fontSizeCounter == 1 ) { changeFontSize(1.5); fontSizeCounter++; button.innerHTML = "Text Size: 200%"; toggleColumnView(1000);}
-    else if( fontSizeCounter == 2 ) { changeFontSize(2.0); fontSizeCounter++; button.innerHTML = "Text Size: 100%"; }
-    else { changeFontSize(1.0); fontSizeCounter = 1; button.innerHTML = "Text Size: 150%"; toggleColumnView(300);}
+    if( fontSizeCounter == 1 ) { changeFontSize(1.5); fontSizeCounter++; button.innerHTML = "Increase text-size"; toggleColumnView(1000);}
+    else if( fontSizeCounter == 2 ) { changeFontSize(2.0); fontSizeCounter++; button.innerHTML = "Decrease text-size"; }
+    else { changeFontSize(1.0); fontSizeCounter = 1; button.innerHTML = "Increase text-size"; toggleColumnView(300);}
 }
 
 function changeColor() {
