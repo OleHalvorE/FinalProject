@@ -135,7 +135,7 @@ table {
 * {
   font-family: Arial, Helvetica, sans-serif, verdana;
   color: #181717;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -164,7 +164,7 @@ hr {
 
 header {
   font-family: Arial, Helvetica, sans-serif, verdana;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   max-width: 1050px;
   margin: 0 auto;
