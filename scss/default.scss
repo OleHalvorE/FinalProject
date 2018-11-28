@@ -4,7 +4,7 @@
 $color: rgb(24, 23, 23);
 $background: white;
 $quote: red;
-$font-size: 16px;
+$font-size: 18px;
 $font-weight: 500;
 
 * {
@@ -138,11 +138,12 @@ header {
         margin-bottom: 30px;
         @supports ( display : grid ) {
             @include tabletQuery() {
+                margin-top: 65px;
                 grid-column: 2 / 3;
                 grid-row: 1;
             }
             @include desktopQuery() {
-                margin-top: 2em;
+                margin-top: 75px;
                 grid-column: 2 / 3;
                 grid-row: 1;
             }

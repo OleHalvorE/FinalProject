@@ -1,5 +1,5 @@
 
-var textSize = 20;
+var textSize = 18;
 var headerSize = 40;
 var currentColor = "white"
 var fontSizeCounter = 1;

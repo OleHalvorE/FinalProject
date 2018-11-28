@@ -135,7 +135,7 @@ table {
 * {
   font-family: Arial, Helvetica, sans-serif, verdana;
   color: #181717;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -164,7 +164,7 @@ hr {
 
 header {
   font-family: Arial, Helvetica, sans-serif, verdana;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   max-width: 1050px;
   margin: 0 auto;
@@ -285,13 +285,14 @@ header nav {
 @supports (display: grid) {
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     header nav {
+      margin-top: 65px;
       grid-column: 2 / 3;
       grid-row: 1;
     }
   }
   @media screen and (min-width: 1024px) {
     header nav {
-      margin-top: 2em;
+      margin-top: 75px;
       grid-column: 2 / 3;
       grid-row: 1;
     }
