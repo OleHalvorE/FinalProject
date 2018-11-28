@@ -37,11 +37,12 @@ function changeColor() {
                     item.style.color = "rgb(24,23,23)";
                     item.style.background = "white";
                 }else {
+                    document.getElementsByTagName("footer")[0].firstChild.style.color = "white";
+                    document.getElementsByTagName("footer")[0].style.background = "black";
                     item.style.color = "white";
                 }
             }
         });
-        document.getElementsByTagName("footer")[0].firstChild.style.color = "rgb(24,23,23)";
         var buttons = document.getElementsByTagName("button");
         for(var i=0; i<buttons.length; i++) {
             buttons[i].style.color = "rgb(24,23,23)";
@@ -59,6 +60,8 @@ function changeColor() {
                     item.style.color = "white";
                     item.style.background = "rgb(24,23,23)";
                 }else {
+                    document.getElementsByTagName("footer")[0].firstChild.style.color = "rgb(24,23,23)";
+                    document.getElementsByTagName("footer")[0].style.background = "white";
                     item.style.color = "rgb(24,23,23)";
                 }
             }
