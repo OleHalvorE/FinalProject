@@ -102,20 +102,30 @@ window.onload = function() {
             }
         });
     }
+    window.addEventListener("resize", function(){
+        var header = document.getElementsByTagName("header")[0];
+        var article = header.getElementsByTagName("article")[0];
+        var figure = header.getElementsByTagName("figure")[0];
+        let size = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); 
+        if( size < 1024 && figure.classList.contains("figure_toggleGrid_fullView") && article.classList.contains("article_toggleGrid_fullView")) {
+            figure.classList.remove("figure_toggleGrid_fullView");
+            article.classList.remove("article_toggleGrid_fullView"); 
+        } 
+        else if((fontSizeCounter == 2 || fontSizeCounter == 3) && size > 1024) {
+            if( !(figure.classList.contains("figure_toggleGrid_fullView") && article.classList.contains("article_toggleGrid_fullView")) ){
+                figure.classList.add("figure_toggleGrid_fullView");
+                article.classList.add("article_toggleGrid_fullView");
+            }
+        }
+    });
 }
 
 function toggleGrid(mode) {
     var header = document.getElementsByTagName("header")[0];
     var article = header.getElementsByTagName("article")[0];
     var figure = header.getElementsByTagName("figure")[0];
-    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    document.html.addEventListener("resize", function(){
-        if( w < 1024 ) {
-            figure.classList.remove("figure_toggleGrid_fullView");
-            article.classList.remove("article_toggleGrid_fullView");
-        }
-    });
-    if( w > 1024 ){
+    let size = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    if( size > 1024 ){
         if(article.nodeName == "ARTICLE" && figure.nodeName == "FIGURE" && mode == "fullView" ) {
             figure.classList.add("figure_toggleGrid_fullView");
             article.classList.add("article_toggleGrid_fullView");
