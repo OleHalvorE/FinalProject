@@ -78,7 +78,7 @@ header {
         @include tabletAndDesktopQuery() {
           position: fixed;
           top: 10px;
-          right: 10px;
+          right: 3em;
           z-index: 100;
         }
         @include tabletQuery() {}
