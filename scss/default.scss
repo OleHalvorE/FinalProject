@@ -49,6 +49,7 @@ header {
       text-align: center;
 
     }
+
     nav{
         text-align: center;
         ul {
@@ -83,7 +84,7 @@ header {
         @include tabletQuery() {}
             button {
                 background: $color;
-                color: $background !important;
+                color: $background /*!important*/;
                 text-align: center;
                 padding: 5px 10px;
                 font-size: 16px;
