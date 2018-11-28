@@ -90,13 +90,9 @@ header {
                 font-size: 16px;
                 font-weight: bold;
                 cursor: pointer;
-                box-shadow: 0.5px 0.5px 4px black;
                 margin: 8px 10px;
-                border: 1px solid black;
                 border-radius: 4px;
-                &:hover {
-                border: 0.2px solid white;
-                }
+                @include buttonHover();
             }
         }
     }
@@ -272,13 +268,9 @@ main {
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            box-shadow: 0.5px 0.5px 4px black;
             margin: 8px 10px;
-            border: 1px solid black;
             border-radius: 4px;
-            &:hover {
-                border: 0.2px solid white;
-            }
+            @include buttonHover();
         }
     }
 
@@ -329,6 +321,7 @@ main {
             article {
                 flex-grow: 2;
                 flex-basis: 500px;
+                margin-right: 30px;
             }
             figure {
                 margin: 0 auto;
