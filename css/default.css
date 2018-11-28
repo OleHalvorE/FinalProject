@@ -523,6 +523,7 @@ main #app {
             flex-grow: 2;
     -ms-flex-preferred-size: 500px;
         flex-basis: 500px;
+    margin-right: 30px;
   }
   main #app figure {
     margin: 0 auto;
