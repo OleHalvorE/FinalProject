@@ -18,9 +18,9 @@ function changeFontSize(percent) {
 
 function cchangefontSize() {
     let button = document.getElementById("fontSize");
-    if( fontSizeCounter == 1 ) { changeFontSize(1.5); fontSizeCounter++; button.innerHTML = "Text Size: 150%"; toggleColumnView(1000);}
-    else if( fontSizeCounter == 2 ) { changeFontSize(2.0); fontSizeCounter++; button.innerHTML = "Text Size: 200%"; }
-    else { changeFontSize(1.0); fontSizeCounter = 1; button.innerHTML = "Text Size: 100%"; toggleColumnView(300);}
+    if( fontSizeCounter == 1 ) { changeFontSize(1.5); fontSizeCounter++; button.innerHTML = "Text Size: 200%"; toggleColumnView(1000);}
+    else if( fontSizeCounter == 2 ) { changeFontSize(2.0); fontSizeCounter++; button.innerHTML = "Text Size: 100%"; }
+    else { changeFontSize(1.0); fontSizeCounter = 1; button.innerHTML = "Text Size: 150%"; toggleColumnView(300);}
 }
 
 function changeColor() {
@@ -29,14 +29,14 @@ function changeColor() {
         currentColor = "black"
         document.body.style.background = "black";
         button.innerHTML = "Contrast: White";
+
         let x = document.body.querySelectorAll("*");
         x.forEach(function(item) {
             if(item.id != "logo") {
-                if( item.className.split(" ")[0] == "playerbtn" ) {
+                if( item.className.split(" ")[0] == "playerbtn" || item.id == "contrast" || item.id == "fontSize") {
                     item.style.color = "rgb(24,23,23)";
                     item.style.background = "white";
-                }
-                else {
+                }else {
                     item.style.color = "white";
                 }
             }
@@ -51,14 +51,14 @@ function changeColor() {
         document.body.style.background = "white";
         currentColor = "white";
         button.innerHTML = "Contrast: Black";
+
         let x = document.body.querySelectorAll("*");
         x.forEach(function(item) {
             if(item.id != "logo") {
-                if( item.className.split(" ")[0] == "playerbtn" ){
+                if( item.className.split(" ")[0] == "playerbtn" || item.id == "contrast" || item.id == "fontSize"){
                     item.style.color = "white";
                     item.style.background = "rgb(24,23,23)";
-                }
-                else {
+                }else {
                     item.style.color = "rgb(24,23,23)";
                 }
             }
