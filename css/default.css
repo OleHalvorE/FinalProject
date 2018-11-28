@@ -251,6 +251,7 @@ header nav .buttons button:hover {
 header h1 {
   font-size: 40px;
   margin-top: 15px;
+  font-weight: bold;
 }
 header h1 #logo {
   color: red;
@@ -291,6 +292,7 @@ header h1 #logo {
   }
   @media screen and (min-width: 1024px) {
     header h1 {
+      justify-self: start;
       grid-column: 1 / 2;
       grid-row: 1;
     }
@@ -300,7 +302,6 @@ header nav {
   grid-column: 1;
   grid-row: 2;
   margin-top: 1.5em;
-  margin-bottom: 30px;
 }
 @supports (display: grid) {
   @media screen and (min-width: 768px) and (max-width: 1024px) {
