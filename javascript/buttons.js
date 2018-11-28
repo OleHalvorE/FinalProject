@@ -18,7 +18,6 @@ function changeFontSize(percent) {
 }
 
 function changefontSize() {
-    toggleGrid();
     let button = document.getElementById("fontSize");
     if( fontSizeCounter == 1 ) { changeFontSize(1.5); fontSizeCounter++; button.innerHTML = "Text Size: 200%"; toggleColumnView(1000); toggleGrid("fullView"); }
     else if( fontSizeCounter == 2 ) { changeFontSize(2.0); fontSizeCounter++; button.innerHTML = "Text Size: 100%"; toggleGrid("fullView"); }
