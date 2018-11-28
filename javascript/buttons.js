@@ -109,12 +109,12 @@ function toggleGrid(mode) {
     var article = header.getElementsByTagName("article")[0];
     var figure = header.getElementsByTagName("figure")[0];
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    document.body.addEventListener("resize", function(){
-        if( w > 1024 ) {
+    document.html.addEventListener("resize", function(){
+        if( w < 1024 ) {
             figure.classList.remove("figure_toggleGrid_fullView");
             article.classList.remove("article_toggleGrid_fullView");
         }
-    })
+    });
     if( w > 1024 ){
         if(article.nodeName == "ARTICLE" && figure.nodeName == "FIGURE" && mode == "fullView" ) {
             figure.classList.add("figure_toggleGrid_fullView");
