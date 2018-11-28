@@ -4,6 +4,7 @@ var headerSize = 40;
 var currentColor = "white"
 var fontSizeCounter = 1;
 
+
 function changeFontSize(percent) {
     let x = document.body.querySelectorAll("*");
     x.forEach(function(item) {
@@ -17,10 +18,11 @@ function changeFontSize(percent) {
 }
 
 function changefontSize() {
+    toggleGrid();
     let button = document.getElementById("fontSize");
-    if( fontSizeCounter == 1 ) { changeFontSize(1.5); fontSizeCounter++; button.innerHTML = "Text Size: 200%"; toggleColumnView(1000);}
-    else if( fontSizeCounter == 2 ) { changeFontSize(2.0); fontSizeCounter++; button.innerHTML = "Text Size: 100%"; }
-    else { changeFontSize(1.0); fontSizeCounter = 1; button.innerHTML = "Text Size: 150%"; toggleColumnView(300);}
+    if( fontSizeCounter == 1 ) { changeFontSize(1.5); fontSizeCounter++; button.innerHTML = "Text Size: 200%"; toggleColumnView(1000); toggleGrid("fullView"); }
+    else if( fontSizeCounter == 2 ) { changeFontSize(2.0); fontSizeCounter++; button.innerHTML = "Text Size: 100%"; toggleGrid("fullView"); }
+    else { changeFontSize(1.0); fontSizeCounter = 1; button.innerHTML = "Text Size: 150%"; toggleColumnView(300); toggleGrid("normalView"); }
 }
 
 function changeColor() {
@@ -100,5 +102,28 @@ window.onload = function() {
                 this.style.color = "white";
             }
         });
+    }
+}
+
+function toggleGrid(mode) {
+    var header = document.getElementsByTagName("header")[0];
+    var article = header.getElementsByTagName("article")[0];
+    var figure = header.getElementsByTagName("figure")[0];
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    document.body.addEventListener("resize", function(){
+        if( w > 1024 ) {
+            figure.classList.remove("figure_toggleGrid_fullView");
+            article.classList.remove("article_toggleGrid_fullView");
+        }
+    })
+    if( w > 1024 ){
+        if(article.nodeName == "ARTICLE" && figure.nodeName == "FIGURE" && mode == "fullView" ) {
+            figure.classList.add("figure_toggleGrid_fullView");
+            article.classList.add("article_toggleGrid_fullView");
+        }
+        else if(article.nodeName == "ARTICLE" && figure.nodeName == "FIGURE" && mode == "normalView" ) {
+            figure.classList.remove("figure_toggleGrid_fullView");
+            article.classList.remove("article_toggleGrid_fullView");
+        }
     }
 }
