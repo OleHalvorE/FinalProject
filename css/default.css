@@ -401,6 +401,10 @@ main #problem {
           column-rule: 1px inset black;
   margin: 0 auto;
 }
+main #problem img {
+  width: 300px;
+  display: inline-block;
+}
 main #videocontainer {
   max-width: 1000px;
 }

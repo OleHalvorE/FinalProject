@@ -28,6 +28,7 @@ h2 {
         color: $quote;
     }
 }
+
 strong {
     font-weight: bold;
 }
@@ -231,6 +232,12 @@ main {
     }
     #problem {
         @include baseArticle();
+
+        img {
+          width: 300px;
+          display: inline-block;
+        }
+
     }
 
     #videocontainer {
@@ -355,7 +362,7 @@ footer {
 
 .figure_toggleGrid_fullView {
     grid-column: 1 / 3;
-    grid-row: 2; 
+    grid-row: 2;
 }
 
 .article_toggleGrid_fullView {
