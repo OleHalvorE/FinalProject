@@ -139,9 +139,9 @@ table {
   font-weight: 500;
 }
 
-p::before {
-  white-space: pre;
-  content: "\a";
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h2 {
@@ -389,6 +389,15 @@ main section {
   -webkit-box-shadow: 1px 1px 15px 0px gray;
           box-shadow: 1px 1px 15px 0px gray;
 }
+main section .floatImg {
+  width: 200px;
+  float: right;
+  display: inline;
+  z-index: -100;
+}
+main section .columnImg {
+  width: 200px;
+}
 main li {
   list-style-position: inside;
   list-style-type: disc;
@@ -400,10 +409,6 @@ main #problem {
   -webkit-column-rule: 1px inset black;
           column-rule: 1px inset black;
   margin: 0 auto;
-}
-main #problem img {
-  width: 300px;
-  display: inline-block;
 }
 main #videocontainer {
   max-width: 1000px;
@@ -458,23 +463,23 @@ main #videocontainer .playerbtn:hover {
   border: 1px solid rgba(0, 0, 0, 0);
 }
 main #solution {
+  /*img {
+      float: left;
+      margin: 2em;
+      margin-left: 0;
+      shape-outside: ellipse();
+      img:after {
+          clear: both;
+          content: "";
+          display: table;
+      }
+  }*/
   -webkit-column-width: 300px;
           column-width: 300px;
   max-width: 1000px;
   -webkit-column-rule: 1px inset black;
           column-rule: 1px inset black;
   margin: 0 auto;
-}
-main #solution img {
-  float: left;
-  margin: 2em;
-  margin-left: 0;
-  shape-outside: ellipse();
-}
-main #solution img img:after {
-  clear: both;
-  content: "";
-  display: table;
 }
 main #product {
   -webkit-column-width: 300px;

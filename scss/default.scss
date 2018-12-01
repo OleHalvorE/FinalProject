@@ -15,10 +15,8 @@ $font-weight: 500;
 }
 
 p {
-    &::before {
-        white-space: pre;
-        content: "\a";
-    }
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 h2 {
@@ -225,18 +223,26 @@ main {
     section {
       padding:5%;
       box-shadow: 1px 1px 15px 0px gray;
+
+      .floatImg {
+        width: 200px;
+        float:right;
+        display: inline;
+        z-index: -100;
+      }
+      .columnImg{
+        width: 200px;
+      }
     }
     li {
         list-style-position: inside;
         list-style-type: disc;
     }
+
     #problem {
         @include baseArticle();
 
-        img {
-          width: 300px;
-          display: inline-block;
-        }
+
 
     }
 
@@ -282,7 +288,7 @@ main {
     }
 
     #solution {
-        img {
+        /*img {
             float: left;
             margin: 2em;
             margin-left: 0;
@@ -292,7 +298,7 @@ main {
                 content: "";
                 display: table;
             }
-        }
+        }*/
         @include baseArticle();
     }
 
