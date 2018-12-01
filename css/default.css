@@ -390,13 +390,18 @@ main section {
           box-shadow: 1px 1px 15px 0px gray;
 }
 main section .floatImg {
-  width: 200px;
+  width: 60%;
+  margin-right: 3px;
   float: right;
   display: inline;
-  z-index: -100;
 }
 main section .columnImg {
-  width: 200px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 main li {
   list-style-position: inside;

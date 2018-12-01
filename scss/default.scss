@@ -225,13 +225,18 @@ main {
       box-shadow: 1px 1px 15px 0px gray;
 
       .floatImg {
-        width: 200px;
+        width: 60%;
+        margin-right: 3px;
         float:right;
         display: inline;
-        z-index: -100;
       }
       .columnImg{
-        width: 200px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display:block;
       }
     }
     li {
@@ -299,6 +304,9 @@ main {
                 display: table;
             }
         }*/
+
+        img{
+        }
         @include baseArticle();
     }
 

@@ -106,11 +106,11 @@ window.onload = function() {
         var header = document.getElementsByTagName("header")[0];
         var article = header.getElementsByTagName("article")[0];
         var figure = header.getElementsByTagName("figure")[0];
-        let size = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); 
+        let size = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
         if( size < 1024 && figure.classList.contains("figure_toggleGrid_fullView") && article.classList.contains("article_toggleGrid_fullView")) {
             figure.classList.remove("figure_toggleGrid_fullView");
-            article.classList.remove("article_toggleGrid_fullView"); 
-        } 
+            article.classList.remove("article_toggleGrid_fullView");
+        }
         else if((fontSizeCounter == 2 || fontSizeCounter == 3) && size > 1024) {
             if( !(figure.classList.contains("figure_toggleGrid_fullView") && article.classList.contains("article_toggleGrid_fullView")) ){
                 figure.classList.add("figure_toggleGrid_fullView");
